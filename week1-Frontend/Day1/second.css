@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('4103414.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Use min-height instead of fixed height */
+    padding: 50px 0;  /* Added padding to give space from top & bottom */
+    margin: 0;
+}
+
+.container {
+    background: rgb(244, 244, 242);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 450px;
+}
+
+h2 {
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 8px;
+}
+
+input, select, textarea {
+    width: 98%;  /* Prevents overflow from fieldset */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box; /* Includes padding & border in width */
+}
+
+textarea {
+    resize: vertical; /* Allows resizing only up/down */
+    min-height: 80px; /* Prevents it from being too small */
+}
+
+.radio-group, .checkbox-group {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background: #0056b3;
+}

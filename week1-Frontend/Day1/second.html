@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="second.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Registration Form</h2>
+        <!-- Form -->
+         <form action="submit.php" method="post" enctype="multipart/form-data">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="Full name">Full name</label>
+                <input type="text" name="name" id="name"placeholder="enter your full name" required>
+                <label for="Email">Email</label>
+                <input type="email" name="email" id="email" placeholder="enter your email" required>
+                <label for="password">password</label>
+                <input type="text" name="password" id="password" placeholder="enter your password" required>
+            </fieldset>
+            <!-- Additional information -->
+            <fieldset>
+                <legend>Additional information</legend>
+                <label for="age">Age</label>
+                <input type="text" name="age" id="age" min="18" max="100" required>
+                <label for="bob">Date of Birth</label>
+                <input type="date" name="dob" id="dob" required>
+                <label for="gender">Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male"required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female"required>
+                    <label for="female">Female</label>
+                </div>
+                <label for="country">Country:</label>
+                <select name="country" id="country" required>
+                    <option value="">Select Country</option>
+                    <option value="usa">USA</option>
+                    <option value="india">India</option>
+                    <option value="china">China</option>
+                    <option value="germany">Germany</option>
+                </select>
+            </fieldset>  
+            
+            <!-- Preferences -->
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <label>Interests:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="sports" name="interests" value="sports">
+                    <label for="sports">Sports</label>
+
+                    <input type="checkbox" id="music" name="interests" value="music">
+                    <label for="music">Music</label>
+
+                    <input type="checkbox" id="tech" name="interests" value="tech">
+                    <label for="tech">Technology</label>
+                </div>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="3" placeholder="Tell us something about yourself"></textarea>
+
+                <label for="profilePic">Upload Profile Picture:</label>
+                <input type="file" id="profilePic" name="profilePic">
+            </fieldset>
+
+            <!-- Submission -->
+            <button type="submit">Register</button>  
+         </form>
+    </div>
+</body>
+</html>
