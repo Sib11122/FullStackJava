@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub User Finder</title>
+    <style>
+        body {
+            background-image: url('4103414.jpg');
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        fieldset {
+            width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        input {
+            font-size: 1em;
+            padding: 10px;
+            width: 250px;
+            margin-bottom: 10px;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .profile {
+            margin-top: 20px;
+            display: none;
+        }
+        img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-top: 10px;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>GitHub User Finder</h1>
+    <fieldset>
+        <input type="text" id="username" placeholder="Enter GitHub username">
+    <button id="fetchBtn">Fetch User</button>
+    <p class="error"></p>
+    <div class="profile">
+        <img id="avatar" src="" alt="Profile Picture">
+        <h2 id="name"></h2>
+        <p id="bio"></p>
+        <p><strong>Followers:</strong> <span id="followers"></span></p>
+    </div>
+
+    </fieldset>
+    <script src="fourth.js"></script>
+
+</body>
+</html>
