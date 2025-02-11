@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('4103414.jpg');
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            justify-items: center;
+            margin-top: 50px;
+        }
+        fieldset{
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        button,input,select {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Greeting card generator</h1>
+    <fieldset>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+        <select  id="occasion">
+            <option value="birthday">Birthday</option>
+            <option value="anniversary">Anniversary</option>
+            <option value="graduation">Graduation</option>
+        </select>
+        <button id="generateBtn">Generate</button>
+        <p class="card"></p>
+    </fieldset>
+    <script src="scripts.js"></script>
+</body>
+</html>
