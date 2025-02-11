@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url('4103414.jpg');
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            justify-items: center;
+            margin-top: 50px;
+        }.counter {
+            font-size: 2em;
+            margin: 20px;
+        }
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        fieldset{
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple counter</h1>
+    <fieldset>
+        <p class="counter">0</p>
+    <button id="increment">increment</button>
+    <button id="decrement">decrement</button>
+    <button id="reset">reset</button>
+    </fieldset>
+    <script>
+        let counter = 0;
+        const counterDisplay = document.querySelector(".counter");
+        const incrementBtn = document.getElementById("increment");
+        const decrementBtn = document.getElementById("decrement");
+        const resetBtn = document.getElementById("reset");
+
+        incrementBtn.addEventListener("click", () => {
+            counter++;
+            counterDisplay.textContent = counter;
+        });
+        decrementBtn.addEventListener("click", () => {
+            counter--;
+            counterDisplay.textContent = counter;
+        });
+        resetBtn.addEventListener("click", () => {
+            counter = 0;
+            counterDisplay.textContent = counter;
+        });
+        function testScoping(){
+            if(true){
+                let localVariable = "I am blocked-scoped";
+                var functionScopedVar = "I am function-scoped";
+                console.log(localVariable);
+            }
+            console.log(functionScopedVar);
+        }
+        testScoping();
+    </script>
+</body>
+</html>
